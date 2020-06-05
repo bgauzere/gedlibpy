@@ -20,6 +20,7 @@
  
 """
 
+
 ################################
 ##DEFINITIONS OF C++ FUNCTIONS##
 ################################
@@ -851,7 +852,7 @@ def add_nx_graph(g, classe, ignore_duplicates=True) :
     """
     id = add_graph(g.name, classe)
     for node in g.nodes :
-        add_node(id, str(node), g.node[node])
+        add_node(id, str(node), g.nodes[node])
     for edge in g.edges :
         add_edge(id, str(edge[0]), str(edge[1]), g.get_edge_data(edge[0],edge[1]), ignore_duplicates)
     return id
